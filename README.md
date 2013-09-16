@@ -9,20 +9,24 @@ deploy virtual machine hosts and clients quickly using PXE netboot and preseeded
 
 Currently the preseeded options include:
 
--en_SL locale (locale en, location Slovenia) and Slovenian keymap
--DHCP network config (can be customized manually after installation in interfaces file)
--SSH remote installation console
+- en_SL locale (locale en, location Slovenia) and Slovenian keymap
+- DHCP network config (can be customized manually after installation in interfaces file)
+- SSH remote installation console
 
-  For KVM hosts:
-  -initial time config w/NTP 0.si.pool.ntp.org
-  -LVM partitioning
-  -packages ubuntu-standard, openssh-server, ubuntu-virt-server, ntp, linux-generic
+For KVM hosts:
+  - initial time config w/NTP 0.si.pool.ntp.org
+  - LVM partitioning (WARNING, overwrites first disk)
+  - packages ubuntu-standard, openssh-server, ubuntu-virt-server, ntp, linux-generic
 
-  For virtual machines:
-  -standard guided partitioning
-  -packages ubuntu-standard, openssh-server, linux-virtual
+For virtual machines:
+  - standard guided partitioning (WARNING, overwrites first disk)
+  - packages ubuntu-standard, openssh-server, linux-virtual
   
   Also a standard Ubuntu netboot install menu is available.
+
+  <b>WARNING: There is no prompt to confirm partitioning before writing the partition table to disk,
+  so BE CAREFUL, as you may LOSE ALL YOUR DATA if you (or an unsuspecting passer-by in the same subnet) 
+  run the installation on a existing machine.</b>
   
   The installation requires an active DHCP server with the ability to configure for PXE booting,
   TFTP server (tftpd-hpa recommended) to serve the netboot-installer and HTTP server (apache etc) 
