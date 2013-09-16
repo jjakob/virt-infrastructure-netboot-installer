@@ -1,0 +1,15 @@
+                  0fHelp for preseeded installation options07
+
+This is a customized Ubuntu 12.04 installer.
+
+It lets you select one of several preseeded, (semi-)automated installation
+options.
+
+09F1107   0fKVM host07
+09F1207   0fVirtual machine07
+
+Abak.net d.o.o.
+jernej.jakob@abak.si
+
+Press F11 or F12 for subtopics.
+Enter "menu" and press enter to return to the previous menu.

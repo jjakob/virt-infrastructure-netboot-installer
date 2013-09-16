@@ -1,0 +1,12 @@
+                  0fKVM host07                                                    09F107
+
+Partitions the first hard disk the following way:
+256M /boot ext3
+max  LVM volume group
+10GB logical volume "root"
+1GB  swap
+free space unallocated
+
+Packages installed are: ubuntu-default, openssh-server, ubuntu-virt-server,
+                        linux-generic
+

@@ -1,0 +1,6 @@
+                  0fVirtual machine (client)07                                   09F1207
+
+Uses guided partitioning allocating the entire disk.
+
+Packages installed are: ubuntu-default, openssh-server, linux-virtual
+
