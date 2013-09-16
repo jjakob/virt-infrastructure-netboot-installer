@@ -36,3 +36,14 @@ For virtual machines:
   Note: hostnames and specifics (minimally the locales, keymaps, TFTP, HTTP, proxy settings)
   for your setup will have to be configured manually in all appropriate places. A script to do this would be best, 
   but there is none at the moment. Not recommended for beginners.
+
+Installation
+------------
+
+1. Copy contents of 12.04-amd64 directory into TFTP server root.
+2. Customize files in 12.04-amd64/ubuntu-installer/amd64/boot-screens/
+   - txt-preseed.cfg : locales, keymap, hostname of HTTP server for preseeding
+3. Point DHCP PXE hostname to hostname of TFTP server and filename to 12.04-amd64/pxelinux.0
+4. Copy contents of preseed directory to HTTP server document root.
+5. Customize preseed files
+   - locales, keymap, timezone, NTP server, APT mirror, install console password, partition sizes, packages, kernel
